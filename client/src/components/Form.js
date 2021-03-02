@@ -70,16 +70,6 @@ function Form({ submit, add }) {
           <button id='submit' type='button' onClick={handleSubmit}>
             Submit
           </button>
-
-          {/* {button ? (
-            <button type='submit' id='submit'>
-              Submit
-            </button>
-          ) : (
-            <button type='submit' id='add'>
-              Add
-            </button>
-          )} */}
         </div>
 
         <div className='add'>
