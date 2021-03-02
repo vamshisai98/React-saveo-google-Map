@@ -32,10 +32,6 @@ function Table() {
     },
   ]);
 
-  useEffect(() => {
-    console.log(input);
-  });
-
   return (
     <div>
       <div className='table-header'>ALL CO-ORDINATES</div>

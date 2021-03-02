@@ -106,7 +106,7 @@ button#add {
   line-height: 33px;
 }
 
-input :focus {
+input:focus {
   outline: none;
 }
 
