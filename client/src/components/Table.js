@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from 'react';
 import { DetailsContext } from '../App';
 
 function Table() {
-  const input = useContext(DetailsContext);
+  const { input, showRoute } = useContext(DetailsContext);
 
   const [init, setInit] = useState([
     {
@@ -84,25 +84,16 @@ function Table() {
               ))}
             </tbody>
           )}
-          {/* <tbody>
-            {input.map((inp, index) => (
-              <tr key={index}>
-                <td>{inp.Location}</td>
-                <td>{inp.Lat}</td>
-                <td>{inp.Long}</td>
-              </tr>
-            ))}
-          </tbody> */}
         </table>
       </div>
 
       <div className='route'>
         {input.length > 0 ? (
-          <button type='submit' id='route'>
+          <button type='button' id='route' onClick={() => showRoute(true)}>
             Show Route
           </button>
         ) : (
-          <button type='submit' id='disable' disabled>
+          <button type='button' id='disable' disabled>
             Show Route
           </button>
         )}
@@ -110,7 +101,5 @@ function Table() {
     </div>
   );
 }
-
-// AIzaSyCDS_5PZVgK1diAYzmic3sl4XB4WkKQ0T0
 
 export default Table;

@@ -92,6 +92,24 @@ button#submit {
   line-height: 33px;
 }
 
+button#add {
+  border: none;
+  color: #074770;
+  position: absolute;
+  right: 208px;
+  top: 43px;
+  width: 160px;
+  background: #FFFFFF;
+  text-align: center;
+  height: 33px;
+  border-radius: 21px;
+  line-height: 33px;
+}
+
+input :focus {
+  outline: none;
+}
+
 
 .content2 {
   display: flex;

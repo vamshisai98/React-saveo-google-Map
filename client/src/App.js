@@ -8,15 +8,28 @@ export const DetailsContext = React.createContext();
 
 function App() {
   const [input, setInput] = useState([]);
+  const [pins, setPins] = useState([]);
+
   const handleSubmit = (data) => {
     setInput([...input, data]);
   };
+
+  const handleAdd = (data) => {
+    setPins([...pins, data]);
+  };
+
+  const [show, setShow] = useState(false);
+
+  const showRoute = (data) => {
+    setShow(data);
+  };
+
   return (
     <div className='app'>
-      <DetailsContext.Provider value={input}>
+      <DetailsContext.Provider value={{ input, pins, showRoute, show }}>
         <button id='home'>Home</button>
         <div className='content'>
-          <Form submit={handleSubmit} />
+          <Form submit={handleSubmit} add={handleAdd} />
           <div className='content2'>
             <div className='table-content'>
               <Table />
